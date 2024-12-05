@@ -13,7 +13,7 @@ class RegisterActivity : AppCompatActivity(R.layout.activity_register)  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding.btnRegister.setOnClickListener {
+        binding.btnSignUp.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()

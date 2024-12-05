@@ -4,4 +4,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="signup_text"><u><b>Sign Up</b></u></string>
+    <string name="sudah_siap_tampil_stylish_hari_ini">Sudah siap tampil stylish hari ini?</string>
+    <string name="hi_user">Hi User</string>
 </resources>
