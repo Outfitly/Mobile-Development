@@ -53,15 +53,15 @@
         />
 
     <EditText
-        android:id="@+id/edt_phone"
+        android:id="@+id/edt_birthdate"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="46dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/bg_border_edit_text"
-        android:drawableStart="@drawable/ic_phone"
+        android:drawableStart="@drawable/ic_calendar"
         android:drawablePadding="16dp"
-        android:hint="Phone Number"
+        android:hint="Birth Date (DDMMYYYY)"
         android:paddingHorizontal="16dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -79,7 +79,7 @@
         app:boxStrokeWidthFocused="0dp"
         app:hintTextColor="@color/black"
         app:passwordToggleTint="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/edt_phone">
+        app:layout_constraintTop_toBottomOf="@id/edt_birthdate">
 
         <EditText
             android:id="@+id/edt_password"
