@@ -186,6 +186,17 @@
 
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/pb_register"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sign_up_google"
         android:layout_height="50dp"

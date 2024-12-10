@@ -9,11 +9,13 @@
         tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_greet_user"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="23dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp">
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginTop="49dp">
 
         <ImageView
             android:layout_width="40dp"
@@ -50,34 +52,198 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_greetings" />
 
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/ic_username"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="261dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-            android:id="@+id/text_home"
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_home_search_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginHorizontal="46dp"
+            android:layout_marginTop="30dp"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_search"
+            app:layout_constraintTop_toBottomOf="@id/layout_greet_user"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
 
-    <ImageView
-        android:id="@+id/user_image"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="9dp"
-        android:src="@drawable/ic_username"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="261dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_border_edit_text"
+                android:hint="Search your favorite"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/itim"
+                android:textSize="12sp"
+                android:textCursorDrawable="@drawable/custom_cursor"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_home_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/edt_home_search_button">
+
+        <TextView
+            android:id="@+id/tv_category_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bagel_fat_one"
+            android:text="Category"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_style_scan"
+                android:layout_width="142dp"
+                android:layout_height="50dp"
+                app:cornerRadius="40dp"
+                android:backgroundTint="@color/white"
+                android:text="Style Scan"
+                android:fontFamily="@font/itim"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/ic_style_scan"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:insetRight="0dp"
+                android:insetLeft="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_category_home"
+                />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_favorites"
+            android:layout_width="142dp"
+            android:layout_height="50dp"
+            app:cornerRadius="40dp"
+            android:backgroundTint="@color/white"
+            android:text="Favorites"
+            android:fontFamily="@font/itim"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_favorites_home_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="14dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetRight="0dp"
+            android:insetLeft="0dp"
+            app:layout_constraintStart_toEndOf="@id/btn_style_scan"
+            app:layout_constraintTop_toBottomOf="@id/tv_category_home"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_my_closet"
+            android:layout_width="142dp"
+            android:layout_height="50dp"
+            app:cornerRadius="40dp"
+            android:backgroundTint="@color/white"
+            android:text="My Closet"
+            android:fontFamily="@font/itim"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_my_closet_home_button"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="50dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetRight="0dp"
+            android:insetLeft="0dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_style_scan"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Recent"
+            android:layout_width="142dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_recent_home_button"
+            android:fontFamily="@font/itim"
+            android:text="Recent"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:cornerRadius="40dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetRight="0dp"
+            android:insetLeft="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toEndOf="@id/btn_my_closet"
+            app:layout_constraintTop_toBottomOf="@id/btn_favorites"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_home_button">
+
+        <TextView
+            android:id="@+id/tv_article_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bagel_fat_one"
+            android:text="Article"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <TextView-->
+<!--            android:id="@+id/text_home"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
