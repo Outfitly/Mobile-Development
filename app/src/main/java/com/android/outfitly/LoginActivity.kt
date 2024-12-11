@@ -34,6 +34,11 @@ class LoginActivity : AppCompatActivity(R.layout.activity_login) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.tvSignup.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun performLogin(email: String, password: String) {

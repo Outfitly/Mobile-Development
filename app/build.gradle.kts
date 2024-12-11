@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -58,5 +59,8 @@ dependencies {
     implementation (libs.kotlinx.coroutines.android)
     implementation (libs.androidx.lifecycle.viewmodel.ktx.v261)
     implementation (libs.play.services.auth)
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
+    implementation (libs.logging.interceptor)
 
 }

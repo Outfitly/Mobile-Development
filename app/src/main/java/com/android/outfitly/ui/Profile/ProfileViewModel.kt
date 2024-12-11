@@ -1,4 +1,4 @@
-package com.android.outfitly.ui.notifications
+package com.android.outfitly.ui.Profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
