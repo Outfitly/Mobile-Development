@@ -29,7 +29,6 @@ class HomeFragment : Fragment() {
 
         // Gunakan SessionManager untuk mendapatkan nama/email
         val userName = sessionManager.getUserName()
-        val userEmail = sessionManager.getUserEmail()
 
         // Contoh penggunaan nama atau email
         binding.tvGreetings.text = "Hi $userName"
