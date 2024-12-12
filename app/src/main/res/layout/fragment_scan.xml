@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:text="Choose your image"
         android:textSize="18sp"
+        android:fontFamily="@font/bagel_fat_one"
         android:textColor="@color/grey"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/imageView"
@@ -57,8 +58,13 @@
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
             android:text="Gallery"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/golden"/>
+            android:fontFamily="@font/itim"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/golden"
+            app:icon="@drawable/ic_add_image"
+            app:iconGravity="start"
+            app:iconTint="@color/black"
+            />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_camera"
@@ -67,8 +73,12 @@
             android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:text="Camera"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/golden"/>
+            android:textColor="@color/black"
+            android:fontFamily="@font/itim"
+            android:backgroundTint="@color/golden"
+            app:icon="@drawable/ic_camera"
+            app:iconTint="@color/black"
+            />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton

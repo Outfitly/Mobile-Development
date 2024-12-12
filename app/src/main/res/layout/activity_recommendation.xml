@@ -16,6 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Recommendations"
+            android:fontFamily="@font/bagel_fat_one"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textAlignment="center"
@@ -34,7 +36,9 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textAlignment="center"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/itim"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tv_labels"
@@ -42,12 +46,16 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textAlignment="center"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/itim"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Recommended Items"
+            android:fontFamily="@font/bagel_fat_one"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textAlignment="center"

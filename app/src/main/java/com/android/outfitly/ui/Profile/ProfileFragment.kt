@@ -9,6 +9,7 @@ import com.android.outfitly.LoginActivity
 import com.android.outfitly.R
 import com.android.outfitly.data.local.SessionManager
 import com.android.outfitly.databinding.FragmentProfileBinding
+import com.android.outfitly.ui.AboutActivity
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private val binding by viewBinding(FragmentProfileBinding::bind)
@@ -28,6 +29,11 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             requireActivity().finishAffinity()
+        }
+
+
+        binding.btnAboutapp.setOnClickListener {
+            startActivity(Intent(requireContext(), AboutActivity::class.java))
         }
     }
 }
