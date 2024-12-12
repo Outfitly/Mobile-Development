@@ -8,6 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiClient {
     private const val BASE_URL = "https://outfitly-c242-ps097.uc.r.appspot.com"
     private const val UPLOAD_BASE_URL = "https://outfitly-dummy-919088211277.asia-southeast2.run.app/"
+    private const val BASE_URL_NEWS = "https://newsapi.org/v2/"
 
     private val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
@@ -30,6 +31,14 @@ object ApiClient {
         Retrofit.Builder()
             .baseUrl(UPLOAD_BASE_URL)
             .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ApiService::class.java)
+    }
+
+    val apiClient: ApiService by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL_NEWS)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)

@@ -1,16 +1,9 @@
 package com.android.outfitly.ui.recommendation
 
 import android.os.Bundle
-import android.provider.ContactsContract.Data
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStoreOwner
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.outfitly.MainActivity
 import com.android.outfitly.databinding.ActivityRecommendationBinding
-import com.android.outfitly.ui.dashboard.ScanViewModel
 import com.android.outfitly.util.DataHelper
 import com.bumptech.glide.Glide
 
